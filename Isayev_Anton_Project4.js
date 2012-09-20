@@ -26,21 +26,35 @@ var myLibrary = function(){
 		};
 	};		
 
-	
+	// smallest value in array
 	var seeNumber = function (val) {
 		var number = [1, 3, 5, 7, 9];
 			for (i=number; i<number.length; i++) {
 			if (number[i]<val) {
 		number = number[i];
+			}
 		}
-	}
 		return number;
-};
+	};
+
+	// replacing element in the string
+	var changeString = function(){
+		var string = " a, b, c" ; 
+		var newstring = string.replace(/,/gi, "/");{
+
+		};
+	return newstring;
+	
+	};
+	
+	
 	
 	return { 
-			"checkNumber": checkNumber,
-			"checkURL":    checkURL,
-			"seeNumber": seeNumber
+			"checkNumber":  checkNumber,
+			"checkURL":     checkURL,
+			"seeNumber":    seeNumber,
+			"changeString": changeString
+			
 		};
 	};
 	
@@ -48,4 +62,5 @@ var myLibrary = function(){
 	console.log(nL.checkNumber(5));
 	console.log(nL.checkURL("yahoo.com"));
 	console.log(nL.seeNumber(6));
+	console.log(nL.changeString())
 	
