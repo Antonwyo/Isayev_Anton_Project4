@@ -24,20 +24,28 @@ var myLibrary = function(){
 		} else {
 			return false;
 		};
-	};
+	};		
 
 	
-	
-	
+	var seeNumber = function (val) {
+		var number = [1, 3, 5, 7, 9];
+			for (i=number; i<number.length; i++) {
+			if (number[i]<val) {
+		number = number[i];
+		}
+	}
+		return number;
+};
 	
 	return { 
-			"checkNumber":checkNumber,
-			"checkURL": checkURL
+			"checkNumber": checkNumber,
+			"checkURL":    checkURL,
+			"seeNumber": seeNumber
 		};
 	};
 	
 	var nL  = new myLibrary();
 	console.log(nL.checkNumber(5));
 	console.log(nL.checkURL("yahoo.com"));
-	
+	console.log(nL.seeNumber(6));
 	
