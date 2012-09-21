@@ -3,12 +3,12 @@
 	
 	
 	
-var myLibrary = function(){
+var myLibrary = function () {
 	
 	// number function
-	var checkNumber = function(val) {
+	var checkNumber = function (val) {
 	
-		if(isNaN(val)){
+		if (isNaN(val)) {
 			return false;
 		} else {
 			return true;
@@ -17,9 +17,9 @@ var myLibrary = function(){
 	};
 	
 	// check URL
-	var checkURL = function(val){
-		var first = val.substring(0,val.indexOf(":"));
-		if((first === "http") || (first === "https")){
+	var checkURL = function (val) {
+		var first = val.substring(0,val.indexOf (":"));
+		if ((first === "http") || (first === "https")) {
 			return true;
 		} else {
 			return false;
@@ -38,16 +38,14 @@ var myLibrary = function(){
 	};
 
 	// replacing element in the string
-	var changeString = function(){
-		var string = " a, b, c" ; 
-		var newstring = string.replace(/,/gi, "/");{
-
+	var changeString = function () {
+		var string = " a, b, c"; 
+		var newstring = string.replace(/,/gi, "/"); {
 		};
 	return newstring;
-	
 	};
 	
-	var diffT = function(){
+	var diffT = function () {
 		var oldBegin = 20
 		var oldEnd = 27
 		var newBegin = 21
@@ -56,13 +54,28 @@ var myLibrary = function(){
 	return newEnd
 };
 	
-	var checkString = function(val){
+	var checkString = function (val) {
 var splitResult = val.split("");
-if (splitResult[3]=="-" && splitResult[7]=="-"){
+if (splitResult[3]=="-" && splitResult[7]=="-") {
 	return true;
 		}
 		else { return false ;
 		};
+	};
+	
+	
+	
+	var checkEmail = function (val) {
+		if(val.indexOf(" ") == -1 && val.indexOf("@") == -1) {
+		return false;
+		} else {
+ 	var splitResult1 = val.split("@");
+  	  if ( splitResult1[1].indexOf(".") == -1) {
+   return false;
+  }	else {
+   return true; 
+		};
+ 	  };
 	};
 	
 	
@@ -72,7 +85,8 @@ if (splitResult[3]=="-" && splitResult[7]=="-"){
 			"seeNumber":    seeNumber,
 			"changeString": changeString,
 			"diffT":        diffT,
-			"checkString": checkString
+			"checkString":  checkString,
+			"checkEmail":   checkEmail
 			
 		};
 	};
@@ -84,4 +98,5 @@ if (splitResult[3]=="-" && splitResult[7]=="-"){
 	console.log(nL.changeString());
 	console.log(nL.diffT());
 	console.log(nL.checkString("307-413-2996"));
+	console.log(nL.checkEmail("Antonwyo@fullsail.edu"));
 	
