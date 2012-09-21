@@ -47,13 +47,32 @@ var myLibrary = function(){
 	
 	};
 	
+	var diffT = function(){
+		var oldBegin = 20
+		var oldEnd = 27
+		var newBegin = 21
+
+	var newEnd = new Date(newBegin + oldEnd - oldBegin);
+	return newEnd
+};
+	
+	var checkString = function(val){
+var splitResult = val.split("");
+if (splitResult[3]=="-" && splitResult[7]=="-"){
+	return true;
+		}
+		else { return false ;
+		};
+	};
 	
 	
 	return { 
 			"checkNumber":  checkNumber,
 			"checkURL":     checkURL,
 			"seeNumber":    seeNumber,
-			"changeString": changeString
+			"changeString": changeString,
+			"diffT":        diffT,
+			"checkString": checkString
 			
 		};
 	};
@@ -62,5 +81,7 @@ var myLibrary = function(){
 	console.log(nL.checkNumber(5));
 	console.log(nL.checkURL("yahoo.com"));
 	console.log(nL.seeNumber(6));
-	console.log(nL.changeString())
+	console.log(nL.changeString());
+	console.log(nL.diffT());
+	console.log(nL.checkString("307-413-2996"));
 	
