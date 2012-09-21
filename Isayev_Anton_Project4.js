@@ -86,17 +86,29 @@ if (splitResult[3]=="-" && splitResult[7]=="-") {
 		if (numValue != val) alert('not a number Mr. Lewis');
 		else {return numValue};
 }
+
+
+var splitStringUppercase = function(val){
+	ok = [];
+var splitResult = val.split(",");
+	for (i=0; i<splitResult.length; i++){
+ 		val = splitResult[i].slice(0,1).toUpperCase()+ splitResult[i].slice(1) + ",";
+ 		ok = ok + val;
+}
+return ok;
+}
 	
 	
 	return { 
-			"checkNumber":    checkNumber,
-			"checkURL":       checkURL,
-			"seeNumber":      seeNumber,
-			"changeString":   changeString,
-			"diffT":          diffT,
-			"checkString":    checkString,
-			"checkEmail":     checkEmail,
-		    "stringToNumber": stringToNumber
+			"checkNumber":          checkNumber,
+			"checkURL":             checkURL,
+			"seeNumber":            seeNumber,
+			"changeString":         changeString,
+			"diffT":                diffT,
+			"checkString":          checkString,
+			"checkEmail":           checkEmail,
+		    "stringToNumber":       stringToNumber,
+		    "splitStringUppercase": splitStringUppercase
 			
 		};
 	};
@@ -110,3 +122,4 @@ if (splitResult[3]=="-" && splitResult[7]=="-") {
 	console.log(nL.checkString("307-413-2996"));
 	console.log(nL.checkEmail("Antonwyo@fullsail.edu"));
 	console.log(nL.stringToNumber("24"));
+	 console.log(nL.splitStringUppercase("hi,i,am,anton"));
