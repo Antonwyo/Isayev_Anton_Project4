@@ -64,7 +64,7 @@ if (splitResult[3]=="-" && splitResult[7]=="-") {
 	};
 	
 	
-	
+	// check email 
 	var checkEmail = function (val) {
 		if(val.indexOf(" ") == -1 && val.indexOf("@") == -1) {
 		return false;
@@ -78,15 +78,23 @@ if (splitResult[3]=="-" && splitResult[7]=="-") {
  	  };
 	};
 	
+	// string to number
+	var stringToNumber = function(val){
+	var numValue = +val;
+		if (numValue != val) alert('not a number');
+		else {return numValue};
+}
+	
 	
 	return { 
-			"checkNumber":  checkNumber,
-			"checkURL":     checkURL,
-			"seeNumber":    seeNumber,
-			"changeString": changeString,
-			"diffT":        diffT,
-			"checkString":  checkString,
-			"checkEmail":   checkEmail
+			"checkNumber":    checkNumber,
+			"checkURL":       checkURL,
+			"seeNumber":      seeNumber,
+			"changeString":   changeString,
+			"diffT":          diffT,
+			"checkString":    checkString,
+			"checkEmail":     checkEmail,
+		    "stringToNumber": stringToNumber
 			
 		};
 	};
@@ -99,4 +107,4 @@ if (splitResult[3]=="-" && splitResult[7]=="-") {
 	console.log(nL.diffT());
 	console.log(nL.checkString("307-413-2996"));
 	console.log(nL.checkEmail("Antonwyo@fullsail.edu"));
-	
+	console.log(nL.stringToNumber("24"));
