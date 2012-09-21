@@ -18,7 +18,7 @@ var myLibrary = function () {
 	
 	// check URL
 	var checkURL = function (val) {
-		var first = val.substring(0,val.indexOf (":"));
+	var first = val.substring(0,val.indexOf (":"));
 		if ((first === "http") || (first === "https")) {
 			return true;
 		} else {
@@ -28,14 +28,16 @@ var myLibrary = function () {
 
 	// smallest value in array
 	var seeNumber = function (val) {
-		var number = [1, 3, 5, 7, 9];
-			for (i=number; i<number.length; i++) {
-			if (number[i]<val) {
-		number = number[i];
-			}
-		}
-		return number;
-	};
+ 	var number = [12, 1, 3, 5, 7, 9];
+ 			sortedArray = number.sort(function(a,b){return a - b})
+ 		for (i=0; i<sortedArray.length; i++) {
+  		if (sortedArray[i]>val) {
+ 			number = sortedArray[i];
+ 		break;
+  		};
+ 	};
+ return number;
+};
 
 	// replacing element in the string
 	var changeString = function () {
@@ -81,7 +83,7 @@ if (splitResult[3]=="-" && splitResult[7]=="-") {
 	// string to number
 	var stringToNumber = function(val){
 	var numValue = +val;
-		if (numValue != val) alert('not a number');
+		if (numValue != val) alert('not a number Mr. Lewis');
 		else {return numValue};
 }
 	
